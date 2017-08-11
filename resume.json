@@ -1,0 +1,173 @@
+{
+  "basics": {
+    "name": "William O Caldwell",
+    "label": "Full-Stack Developer",
+    "picture": "https://www.williamocaldwell.com/images/profile-pic.jpg",
+    "email": "wocaldwell@gmail.com",
+    "phone": "(814)418-4083",
+    "website": "https://www.williamocaldwell.com/",
+    "summary": "I just want to make things again. For years that drive sat dormant as I toiled away turning screws and installing the latest version of the hot new Mac OS. But that underlying desire was there. A desire to do more, be more, create more. Software development is my opportunity, my outlet to be a maker again. Let's see what we can make together.",
+    "location": {
+      "address": "1516 Preston Dr.",
+      "postalCode": "37206",
+      "city": "Nashville",
+      "countryCode": "US",
+      "region": "Tennessee"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "William Caldwell",
+        "url": "https://www.linkedin.com/in/william-caldwell-385254140/"
+      },
+      {
+        "network": "Github",
+        "username": "wocaldwell",
+        "url": "https://github.com/wocaldwell"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Nashville Software School",
+      "position": "Apprentice Software Developer",
+      "website": "http://nashvillesoftwareschool.com/",
+      "startDate": "January, 2017",
+      "endDate": "June, 2017",
+      "summary": "Intensive full-time software development bootcamp focusing on full-stack development fundamentals and problem solving. The final three months of the program being executed in a simulated company environment with SCRUM methodology.",
+      "highlights": [
+        "Daily hands on application of OOP fundamentals through group and individual projects",
+        "Created single page applications in JavaScript in the Angular framework as well as HTML, CSS, Bootstrap, and Materialize",
+        "Worked with jQuery for JavaScript libraries",
+        "Utilized Grunt to automate bundling of modules, JavaScript linting, and compiling Sass",
+        "Project management/tracking with Trello and GitHub Issue Tracking",
+        "Solution Design: white-boarding, ERD's and wireframes",
+        "Leveraged Django for creating and editing MVC applications",
+        "Deployed applications through Firebase, GitHub and Heroku",
+        "Source code/version control with Git/GitHub",
+        "Created servers and RESTful API’s with Django REST framework",
+        "Retrieved and stored database information in Firebase and SQLite",
+        "Practiced TDD with Python’s unit test framework"
+      ]
+    },
+    {
+      "company": "Simply Mac - Apple Premier Partner",
+      "position": "Apple Certified Macintosh Technician / Support Professional",
+      "website": "https://simplymac.com/",
+      "startDate": "March, 2015",
+      "endDate": "August, 2016",
+      "summary": "Diagnose and repair Apple hardware as an Apple Certified Macintosh Technician (ACMT) at the nation’s largest Apple Premiere Service Provider location; Identify and install software updates on customers’ computer systems as needed.",
+      "highlights": [
+        "Mentored new junior technicians."
+      ]
+    },
+    {
+      "company": "LivingSound",
+      "position": "Apple Certified Macintosh Technician / Support Professional",
+      "website": "http://www.livingsoundhome.com/",
+      "startDate": "October, 2014",
+      "endDate": "January, 2015",
+      "summary": "Repaired Apple hardware as an ACMT including Mac and iOS; Ordered and tracked the consumable hardware for service sales; Received all incoming inventory for both the service and sales departments; Provided individual training to customers on OS X and iOS topics; Specialized in interfacing datasets between PC and Macintosh hardware environments; Overhauled the check-in procedure to more accurately track and maintain supplies and services.",
+      "highlights": [
+        "Assited in the transition from 'Haddock Computer Center' to 'LivingSound'."
+      ]
+    },
+    {
+      "company": "Haddock Computer",
+      "position": "Apple Certified Macintosh Technician / Support Professional",
+      "website": "http://www.gohaddock.com/",
+      "startDate": "November, 2010",
+      "endDate": "October, 2014",
+      "summary": "Repair Apple hardware as an Apple Certified Macintosh Technician, including Mac and iOS; Provide help desk and phone support as an Apple Certified Support Professional to customers on various Apple hardware and software topics; Helped Haddock Computer Center become the only Apple recognized Premiere Service Provider in the region; Order and track the consumable hardware for service sales; Receive all incoming inventory for both the service and sales departments; Create advertising materials for the computer retail sales department; Provide individual training to customers on OS X and iOS topics; Specialize in interfacing datasets between PC and Macintosh hardware environments; Computer retail sales.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+       "Music City Code"
+  ],
+  "education": [
+    {
+      "institution": "Nashville Software School",
+      "area": "Full-Stack Software Development",
+      "studyType": "Certificate"
+    },
+    {
+      "institution": "Wichita State University",
+      "area": "Ceramic Arts and Ceramics",
+      "studyType": "Bachelor of Fine Arts"
+    },
+    {
+      "institution": "Kansas State University",
+      "area": "Biology, General",
+      "studyType": "N/A"
+    }
+  ],
+  "awards": [
+    "Nominated: Nashville Software School Catalyst Award (Top Developer)"
+  ],
+  "publications": [
+    {
+      "name": "ArriveDry",
+      "description": "A planning SPA for bicycle commuters that queries a weather API to provide short-term forecasting based on location. AngularJS routing takes users to the views. API calls are also made to Google Maps for the user's route distance and duration. All results are compiled and based on the outcome a Firebase DB returns - user specific weather and route recommendations. Bootstrap styling augmented with Sass for a custom look.",
+      "url": "https://www.williamocaldwell.com/arrivedry/",
+      "repo": "https://github.com/wocaldwell/frontend-capstone",
+      "technologies": ["AngularJS", "Bootstrap", "Firebase", "Heroku", "Javascript", "JQuery", "SASS"],
+      "screenshot": "https://www.williamocaldwell.com/images/arrivedry-screen-shot.jpg",
+      "tag": "Commuting by bike has never been so easy"
+    },
+      {
+      "name": "miNyl",
+      "description": "A full-stack application that manages a user's vinyl record collection. The AngularJS client passes all CRUD calls to a Django Restful API. Outside API calls are made to gather album details and the data is manipulated by the client and sent to the DB. Song searches return Album details with the track position highlighted.",
+      "url": "https://www.williamocaldwell.com/minylclient/",
+      "repo": "https://github.com/wocaldwell/minyl-frontend",
+      "technologies": ["AngularJS", "Bootstrap", "Django REST Framework", "Javascript", "JQuery", "Python"],
+      "screenshot": "https://www.williamocaldwell.com/images/minyl-screen-shot.jpg",
+      "tag": "Listen to some GOOD music"
+    },
+    {
+      "name": "Github Battle",
+      "description": "Using React's component based layout and webpack, calls are made to Github's API and this app squares off two Github users deciding a winner based on a simple algorithm. Additionally, React routing takes the user to another page where the most popular Github repositories ranked by their amout of Stars. Many of the views seen by the user take advantage of React's components to reuse modules and only change their state based on the requested page. This project was made during a 'React Fundamentals' course taught by Tyler McGinnis. For more information on the course go to https://reacttraining.com/online.",
+      "url": "https://react-github-battle-1a99c.firebaseapp.com/",
+      "repo": "https://github.com/wocaldwell/react-github-battle",
+      "technologies": ["Babel","CSS", "NPM", "React", "Webpack"],
+      "screenshot": "https://www.williamocaldwell.com/images/github-battle-screen-shot.jpg",
+      "tag": "Enter in two Github usernames, declare one winner"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Technologies Toolbox",
+      "level": "Junior",
+      "keywords": [
+        "AngularJS",
+        "API's/JSON",
+        "Babel",
+        "Bootstrap",
+        "Bower",
+        "Browserify",
+        "CSS",
+        "Django",
+        "Firebase",
+        "Git / Github",
+        "Grunt",
+        "Heroku",
+        "HTML5",
+        "Javascript",
+        "JQuery",
+        "Materialize",
+        "NPM",
+        "Python",
+        "React",
+        "SASS",
+        "SQL",
+        "Webpack"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ]
+}
