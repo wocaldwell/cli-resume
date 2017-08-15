@@ -1,6 +1,7 @@
 import json
 import sys
 from pprint import pprint
+from time import sleep
 
 class Resume():
     '''
@@ -32,15 +33,32 @@ class Resume():
         resume_data = Resume.getJsonData(self, "resume.json")
         resume_basics = resume_data.get("basics")
         name = resume_basics["name"]
-        user_name = input("Hi, I'm {}. What's your name?\n".format(name))
-        print("It's nice to meet you, {}".format(user_name))
+        greeting = "Hi, I'm {}. What's your name?".format(name)
+        Resume.simulateTyping(self, greeting)
+        user_name = input()
+        response_to_user = "It's nice to meet you, {}".format(user_name)
+        Resume.simulateTyping(self, response_to_user)
         return user_name
+
+    def simulateTyping(self, phrase):
+        '''
+        Make cli message appear character by charater as if they where being typed.
+
+        Arguments:
+            phrase(string), the message that will be rendered in the command line.
+        '''
+        for character in phrase:
+            sleep(0.075)
+            sys.stdout.write(character)
+            sys.stdout.flush()
+        print("\n")
 
     def hal9000Response(self, userName):
         '''
         Print classic response from 2001: A Space Odyssey. Used when supplied input is not valid.
         '''
-        print("I'm sorry {}, I'm afraid I can't do that.".format(userName))
+        hal_9000_message = "I'm sorry {}, I'm afraid I can't do that.".format(userName)
+        Resume.simulateTyping(self, hal_9000_message)
 
     def displayCatagoryInformation(self, userSelection, userName):
         '''
@@ -71,11 +89,27 @@ class Resume():
                             if len(job["highlights"]) > 1:
                                 input("Press enter to continue reading.")
                     input("Press enter to see my next position.")
+            if userSelection == '3':
+                resume_volunteer = resume_data.get("volunteer")
+                volunteer_message = "I have recently done volunteer work for the following organizations:"
+                Resume.simulateTyping(self, volunteer_message)
+                for organization in resume_volunteer:
+                    print(organization)
+            if userSelection == '4':
+                resume_education = resume_data.get("education")
+                education_message = "Here's my education history."
+                Resume.simulateTyping(self, education_message)
+                for school in resume_education:
+                    institution = school["institution"]
+                    area = school["area"]
+                    completion = school["studyType"]
+                    school_message = "I attended {} where I studied {}.".format(institution, area)
+                    degree_message = "I earned a {}.".format(completion)
+                    print(school_message)
+                    if completion != "N/A":
+                        print(degree_message)
 
             userSelection = Resume.validateUserSelection(self, userName)
-
-
-
 
 
 
@@ -91,7 +125,8 @@ class Resume():
         '''
         resume_data = Resume.getJsonData(self, "resume.json")
         catagory_names = list(resume_data.keys())
-        print("Here's a list of my resume catagories.")
+        catagories_message = "Here's a list of my resume catagories."
+        Resume.simulateTyping(self, catagories_message)
         for count, catagory in enumerate(catagory_names, 1):
             Resume.catagory_numbers.append(str(count))
             Resume.catagories.append({str(count): resume_data.get(catagory)})
