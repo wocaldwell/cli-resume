@@ -1,5 +1,4 @@
-import json
-import sys
+import json, sys, webbrowser
 from pprint import pprint
 from time import sleep
 
@@ -76,6 +75,8 @@ class Resume():
                 print(resume_basics["summary"])
                 for profile in resume_basics["profiles"]:
                     print("I'm on {}, my username is {}. Go to {} to check it out!".format(profile['network'], profile['username'], profile['url']))
+                # launch website
+                webbrowser.open_new("https://www.williamocaldwell.com/")
             if userSelection == '2':
                 resume_work = resume_data.get("work")
                 print("This is my work history:")
@@ -108,6 +109,13 @@ class Resume():
                     print(school_message)
                     if completion != "N/A":
                         print(degree_message)
+            if userSelection == '5':
+                resume_awards = resume_data.get("awards")
+                award_message = "Here are some of my recent awards."
+                Resume.simulateTyping(self, award_message)
+                for award in resume_awards:
+                    print(award)
+
 
             userSelection = Resume.validateUserSelection(self, userName)
 
@@ -143,10 +151,13 @@ class Resume():
             The input from the cli user in response to asking then to pick a number from the catagories list.
         '''
         while True:
-            user_selection = input("Pick a number from the list and I'll tell you a little bit more about myself.\nType 'e' to exit.\n")
+            selection_message = "Pick a number from the list to see specific details."
+            Resume.simulateTyping(self, selection_message)
+            user_selection = input("Type 'e' to exit.\n")
             if user_selection not in Resume.catagory_numbers:
                 if user_selection == "e":
-                    print("It was nice chatting with you today, {}!\n".format(userName))
+                    exit_message = "It was nice chatting with you today, {}!\n".format(userName)
+                    Resume.simulateTyping(self, exit_message)
                     sys.exit()
                 else:
                     Resume.hal9000Response(self, userName)
