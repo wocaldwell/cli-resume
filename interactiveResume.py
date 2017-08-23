@@ -35,7 +35,7 @@ class Resume():
         greeting = "Hi, I'm {}. What's your name?".format(name)
         Resume.simulateTyping(self, greeting)
         user_name = input()
-        response_to_user = "It's nice to meet you, {}".format(user_name)
+        response_to_user = "It's nice to meet you, {}!".format(user_name)
         Resume.simulateTyping(self, response_to_user)
         return user_name
 
@@ -115,6 +115,16 @@ class Resume():
                 Resume.simulateTyping(self, award_message)
                 for award in resume_awards:
                     print(award)
+            if userSelection == '7':
+                resume_skills = resume_data.get("skills")
+                for skill in resume_skills:
+                    skill_name = skill["name"]
+                    skill_level = skill["level"]
+                    skill_list = skill["keywords"]
+                    skills_message = "The following are my {} skills.\n I am at the {} level in this skillset.\n Highlights of my {} assets are:".format(skill_name, skill_level, skill_name)
+                    Resume.simulateTyping(self, skills_message)
+                    for skill in skill_list:
+                        print(skill)
 
 
             userSelection = Resume.validateUserSelection(self, userName)
