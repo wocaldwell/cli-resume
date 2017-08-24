@@ -115,6 +115,9 @@ class Resume():
                 Resume.simulateTyping(self, award_message)
                 for award in resume_awards:
                     print(award)
+            if userSelection == '6':
+                resume_publications = resume_data.get("publications")
+                print(resume_publications)
             if userSelection == '7':
                 resume_skills = resume_data.get("skills")
                 for skill in resume_skills:
@@ -125,6 +128,12 @@ class Resume():
                     Resume.simulateTyping(self, skills_message)
                     for skill in skill_list:
                         print(skill)
+            if userSelection == '8':
+                resume_languages = resume_data.get("languages")
+                for language in resume_languages:
+                    language_message = "I am a {} in {}.".format(language["fluency"], language["language"])
+                    Resume.simulateTyping(self, language_message)
+
 
 
             userSelection = Resume.validateUserSelection(self, userName)
