@@ -48,6 +48,7 @@ class Resume():
         '''
         for character in phrase:
             sleep(0.075)
+            # sleep(0.0)
             sys.stdout.write(character)
             sys.stdout.flush()
         print("\n")
@@ -75,8 +76,6 @@ class Resume():
                 print(resume_basics["summary"])
                 for profile in resume_basics["profiles"]:
                     print("I'm on {}, my username is {}. Go to {} to check it out!".format(profile['network'], profile['username'], profile['url']))
-                # launch website
-                webbrowser.open_new("https://www.williamocaldwell.com/")
             if userSelection == '2':
                 resume_work = resume_data.get("work")
                 print("This is my work history:")
@@ -117,7 +116,18 @@ class Resume():
                     print(award)
             if userSelection == '6':
                 resume_publications = resume_data.get("publications")
-                print(resume_publications)
+                publications_message = "Here's some of my recently deployed projects."
+                Resume.simulateTyping(self, publications_message)
+                for publication in resume_publications:
+                    print("{}: {}".format(publication["name"], publication["description"]))
+                    publication_message = "Would you like to go to the {} website y/n?".format(publication["name"])
+                    Resume.simulateTyping(self, publication_message)
+                    go_to_website = input()
+                    if go_to_website == 'y':
+                        # launch website
+                        webbrowser.open_new(publication["url"])
+                    else:
+                        pass
             if userSelection == '7':
                 resume_skills = resume_data.get("skills")
                 for skill in resume_skills:
